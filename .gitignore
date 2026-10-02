@@ -1,0 +1,27 @@
+# Compiled and generated local output
+*.exe
+*.dll
+*.pdb
+*.next.*
+bin/
+obj/
+diagnostic.txt
+diagnostic-frame.png
+behavior-settings.json
+launch-result.json
+*-preview.png
+
+# Private development material
+rollback/
+*-import-*/
+*-CHECKPOINT.md
+*VALIDATION.md
+provenance.json
+.env
+.env.*
+*.user
+*.suo
+.vs/
+
+# Keep intentional public preview assets
+!docs/menu-preview.png
