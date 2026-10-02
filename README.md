@@ -8,7 +8,9 @@ A small Windows desktop companion featuring Qa3moz, a green-tailed pixel fox who
 
 ## Try it
 
-[Download the Windows ZIP from Releases](https://github.com/thorestic/Pawquilt/releases/tag/v0.1.0-preview), then extract it. The portable bundle contains `Pawquilt.exe` and its `assets` folder. Keep those files together in a user-writable folder and double-click `Pawquilt.exe` from your normal Windows desktop. The EXE is not a standalone download. It starts roaming, with cursor approach off. A second instance in the same Windows session is refused.
+> **Preview download temporarily withdrawn.** On 2 October 2026, VirusTotal reported **5/71 engine detections** for the published `Pawquilt.exe` (SHA256 `2A3ABB06C4D7C56EA538FC25F5EE9106B3C43378535490763C8F42DCAE17AD94`). The result is under investigation; we have not established whether the detections are correct or false positives. The preview release is now a draft, and ready-to-run public downloads are unavailable. Source remains public. Do not bypass security warnings to run this preview.
+
+When a reviewed release becomes available, extract the complete Windows ZIP. The portable bundle contains `Pawquilt.exe` and its `assets` folder. Keep those files together in a user-writable folder and double-click `Pawquilt.exe` from your normal Windows desktop. The EXE is not a standalone download. It starts roaming, with cursor approach off. A second instance in the same Windows session is refused.
 
 Intended for Windows 10/11, x64, with .NET Framework / CLR 4 installed. The preview was compiled using the installed Framework64 compiler on one Windows laptop; other Windows versions and hardware have not been verified. Verify downloaded files against the release SHA256SUMS.txt; checksums identify bytes and do not prove safety. No installer, account, API key, or network connection is used.
 
