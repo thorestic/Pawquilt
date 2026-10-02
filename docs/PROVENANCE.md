@@ -1,6 +1,6 @@
 # Pawquilt artwork and dependencies
 
-Qa3moz is the original fox character supplied for Pawquilt: dark gray and cream fur, a green tail and facial accents, and a cyan pendant. The fox sprite material and previews were AI-generated with OpenAI tools at thorestic's request for this project. No exclusive rights over AI-generated elements are claimed; copyright eligibility and the extent of protectable rights can vary. The owner authorized redistribution under CC BY 4.0 to the extent licensable. See assets/ARTWORK-NOTICE.md and assets/LICENSE for scope, attribution and the full license.
+Qa3moz is the original fox character supplied for Pawquilt: dark gray and cream fur, a green tail and facial accents, and a cyan pendant. The fox sprite material and previews were AI-generated with OpenAI tools at thorestic's request for this project. No exclusive rights over AI-generated elements are claimed; copyright eligibility and the extent of protectable rights can vary. The owner authorized redistribution under CC BY 4.0 to the extent licensable. See [artwork notice](../assets/ARTWORK-NOTICE.md) and [art license](../assets/LICENSE) for scope, attribution and the full license.
 
 Included artwork:
 
@@ -15,4 +15,4 @@ Application code was developed with ChatGPT/Codex assistance for the user's requ
 
 There is no affiliation with or endorsement by OpenAI or Microsoft. This independent application does not control ChatGPT's built-in pet window.
 
-Code and documentation are MIT licensed, copyright 2026 thorestic; see LICENSE at the root. The original fox sprites, animation GIF and contact sheet are separately CC BY 4.0 to the extent the owner has licensable rights. Platform components retain their own terms; no fonts, runtime assemblies or third-party branded artwork are bundled. Inspection of the project's existing provenance notes identified no concrete unresolved third-party asset blocker. This is not a claim of an exhaustive third-party rights clearance.
+Code and documentation are MIT licensed, copyright 2026 thorestic; see [software license](../LICENSE). The original fox sprites, animation GIF and contact sheet are separately CC BY 4.0 to the extent the owner has licensable rights. Platform components retain their own terms; no fonts, runtime assemblies or third-party branded artwork are bundled. Inspection of the project's existing provenance notes identified no concrete unresolved third-party asset blocker. This is not a claim of an exhaustive third-party rights clearance.

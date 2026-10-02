@@ -47,31 +47,47 @@ An occasional paw request accompanies an Arabic affection bubble, initially elig
 
 ## Privacy and local files
 
-No networking, telemetry, screen capture, OCR, keyboard hooks, key contents, or input-history logging. OS last-input age indicates aggregate inactivity. Cursor coordinates are used for optional approach and intentional dragging; mouse events are handled on the pet itself. Passive fullscreen checks read geometry/visibility/identity, not titles or content. See [PRIVACY.md](PRIVACY.md).
+No networking, telemetry, screen capture, OCR, keyboard hooks, key contents, or input-history logging. OS last-input age indicates aggregate inactivity. Cursor coordinates are used for optional approach and intentional dragging; mouse events are handled on the pet itself. Passive fullscreen checks read geometry/visibility/identity, not titles or content. See [privacy details](docs/PRIVACY.md).
 
 The app may write five preference booleans to `behavior-settings.json`, its own startup/error metadata to `diagnostic.txt`, and a source-art diagnostic frame to `diagnostic-frame.png`, all beside the executable. These are excluded from source staging. The diagnostic frame is rendered artwork, not a desktop screenshot. Windows login startup is changed only through an explicit control.
+
+## Project layout
+
+```text
+Pawquilt/
+├── src/          C# application and runtime logic
+├── tests/        Model, rendering, integration and native preflight checks
+├── scripts/      Build and focused verification scripts
+├── docs/         Privacy, provenance, release notes and artwork previews
+├── assets/       Runtime sprites, timing manifest and separate art license
+├── app.manifest  Windows compatibility, DPI and privilege declaration
+├── LICENSE       MIT software license
+└── README.md
+```
+
+Build output goes to ignored `bin/`, with its own adjacent `assets/` copy. The published preview ZIP remains unchanged; it keeps the simple EXE-plus-assets layout for users.
 
 ## Build
 
 No NuGet packages are required. The script uses the existing Windows .NET Framework compiler:
 
 ```powershell
-.\build.ps1
+.\scripts\build.ps1
 ```
 
-This builds the app and test executable and runs the deterministic tests; it does not launch the pet. `-Stage` writes `.next.exe` outputs instead. If script execution or compilation is restricted, use your approved development environment; do not change OS policies to build this preview.
+This builds the app and test executable into `bin/`, copies runtime assets beside them, and runs the deterministic tests; it does not launch the pet. `-Stage` writes `.next.exe` outputs instead. For a compile-only check, use `-SkipTests`, then run the focused script below. If script execution or compilation is restricted, use your approved development environment; do not change OS policies to build this preview.
 
 Optional validation commands:
 
 ```powershell
-.\verify-six-moves.ps1
-.\PawquiltTests.exe --check-pixel
-.\PawquiltTests.exe --preflight
+.\scripts\verify-six-moves.ps1
+.\bin\PawquiltTests.exe --check-pixel
+.\bin\PawquiltTests.exe --preflight
 ```
 
 The focused script compiles and runs six-move integration checks. Pixel validation checks the original eleven-state set; the focused script checks the six additions. Preflight creates a message-only window and briefly registers/releases hotkeys; close a running companion first to avoid registration conflicts. Tests do not prove native click delivery, focus, hotkey delivery, or every display arrangement.
 
-To start paused from a terminal, use `.\Pawquilt.exe --paused`. Normal launch starts roaming. Do not start it from a noninteractive/private desktop and expect to see it on the user's desktop.
+To start a source-built app paused from a terminal, use `.\bin\Pawquilt.exe --paused`. Normal launch starts roaming. Do not start it from a noninteractive/private desktop and expect to see it on the user's desktop.
 
 ## What has been verified
 
@@ -79,4 +95,4 @@ The saved core passed its deterministic suite and base-art render checks. The si
 
 Further hands-on verification remains for fullscreen/quiet recovery, bubble click-through/focus, lock/unlock, disconnects during motion, and broader monitor/DPI combinations. Secure lock and UAC desktops are not overridden. Actual computer sleep suspends the application. Horizontal adjacent monitors use a visible crossing arc; separated or vertical layouts currently use a bounded fade handoff. This is a preview, not a claim of comprehensive hardware testing.
 
-See [artwork and dependency provenance](PROVENANCE.md) and [preview release notes](RELEASE-NOTES.md).
+See [artwork and dependency provenance](docs/PROVENANCE.md) and [preview release notes](docs/RELEASE-NOTES.md).
